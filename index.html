@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Story Generator</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Faculty+Glyphic:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="container">
+            <h1 class="fade-in" style="font-family: 'Faculty Glyphic', sans-serif; font-size: 26px; color: #FF69B4;">
+                💕 Your Personalized Love Story 💕
+            </h1>
+            <input type="text" id="name1" placeholder="Enter His Name">
+            <input type="text" id="name2" placeholder="Enter Her Name">
+            <button onclick="generateStory()">Create Story</button>
+
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeSwitch">
+                <span class="slider"></span>
+                <span class="label-text">Dark Mode</span>
+            </label>
+
+            <audio id="bg-music" loop>
+                <source src="romantic_music.mp3" type="audio/mpeg">
+            </audio>
+
+            <div id="story-card" class="fade-in">
+                <div id="story-content"></div>
+                <div class="rating">
+                    <span onclick="rateStory(1)">⭐</span>
+                    <span onclick="rateStory(2)">⭐</span>
+                    <span onclick="rateStory(3)">⭐</span>
+                    <span onclick="rateStory(4)">⭐</span>
+                    <span onclick="rateStory(5)">⭐</span>
+                </div>
+                <button onclick="shareStory()">Share 💌</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
